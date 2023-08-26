@@ -1,5 +1,5 @@
-function intiialize() {
-    
+function initialize() {
+
 }
 
 export default initialize
