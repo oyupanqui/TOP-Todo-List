@@ -1,8 +1,8 @@
 function updateClock () {
-    const date = document.getElementById("date")
+    const date = document.getElementsByTagName("date")[0]
     
     function timeNow(date) {
-        date.textContent = new Date().toLocaleTimeString()
+        date.textContent = new Date().toLocaleString()
     }
 
     setInterval(function () {
