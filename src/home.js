@@ -1,19 +1,7 @@
-const content = document.getElementById("content")
-
-function loadHeader() {
-    const header = document.createElement("header")
-    header.classList.add("header")
-    content.appendChild(header)
-    return header
-}
-
-function loadUI() {
-    loadHeader()
-
-}
+import updateClock from './date'
 
 function loadHome() {
-    loadUI()
+    updateClock()
 }
 
 export default loadHome

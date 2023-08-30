@@ -10,13 +10,23 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/date.js":
+/*!*********************!*\
+  !*** ./src/date.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction updateClock () {\n    const date = document.getElementById(\"date\")\n    \n    function timeNow(date) {\n        date.textContent = new Date().toLocaleTimeString()\n    }\n\n    setInterval(function () {\n        timeNow(date)\n    }, 1000)\n    return date\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (updateClock);\n\n//# sourceURL=webpack://top-todo-list/./src/date.js?");
+
+/***/ }),
+
 /***/ "./src/home.js":
 /*!*********************!*\
   !*** ./src/home.js ***!
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst content = document.getElementById(\"content\")\n\nfunction loadHeader() {\n    const header = document.createElement(\"header\")\n    header.classList.add(\"header\")\n    content.appendChild(header)\n    return header\n}\n\nfunction loadUI() {\n    loadHeader()\n\n}\n\nfunction loadHome() {\n    loadUI()\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadHome);\n\n//# sourceURL=webpack://top-todo-list/./src/home.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _date__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./date */ \"./src/date.js\");\n\n\nfunction loadHome() {\n    (0,_date__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadHome);\n\n//# sourceURL=webpack://top-todo-list/./src/home.js?");
 
 /***/ }),
 
