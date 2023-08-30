@@ -35,6 +35,11 @@ header {
     text-align: center;
 }
 
+#clock {
+    width: 20px;
+    height: 20px;
+}
+
 main {
     display: flex;
     flex-direction: row;
@@ -62,4 +67,8 @@ footer {
     flex-direction: row;
     align-items: center;
     gap: 2px;
+}
+#github {
+    width: 20px;
+    height: 20px;
 }
