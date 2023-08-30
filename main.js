@@ -16,7 +16,7 @@
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction updateClock () {\n    const date = document.getElementById(\"date\")\n    \n    function timeNow(date) {\n        date.textContent = new Date().toLocaleTimeString()\n    }\n\n    setInterval(function () {\n        timeNow(date)\n    }, 1000)\n    return date\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (updateClock);\n\n//# sourceURL=webpack://top-todo-list/./src/date.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction updateClock () {\n    const date = document.getElementsByTagName(\"date\")[0]\n    \n    function timeNow(date) {\n        date.textContent = new Date().toLocaleString()\n    }\n\n    setInterval(function () {\n        timeNow(date)\n    }, 1000)\n    return date\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (updateClock);\n\n//# sourceURL=webpack://top-todo-list/./src/date.js?");
 
 /***/ }),
 
