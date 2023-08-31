@@ -22,9 +22,22 @@ header {
     background-color: rgba(255, 174, 0, 0.4);
 }
 
-#menu-selector {
+.menu-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 20%;
-    height: 25px
+}
+
+#menu-svg {
+    height: 30px;
+    padding: 10px
+}
+
+#menu-svg:hover {
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
 }
 
 #logo {
@@ -38,7 +51,7 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 2px;
+    gap: 5px;
 }
 
 #clock {
