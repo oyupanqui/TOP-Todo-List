@@ -78,6 +78,10 @@ ul {
     text-align: center;
   }
 
+.btn-nav {
+    cursor: pointer;
+}
+
 h2 {
     text-decoration: underline;
 }
