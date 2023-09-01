@@ -78,6 +78,10 @@ ul {
     text-align: center;
   }
 
+h2 {
+    text-decoration: underline;
+}
+
 content {
     width: 80%;
 }
