@@ -77,6 +77,19 @@ nav {
     flex-direction: column;
     width: 20%;
     background-color: rgba(230, 21, 13, 0.4);
+    transition: width 1s ease-out, color .5s ease-in;
+}
+
+.nav-inactive {
+    width: 0;
+    color: transparent;
+    pointer-events: none;
+}
+
+.nav-active {
+    width: 20%;
+    color: black;
+    pointer-events: all;
 }
 
 ul {
