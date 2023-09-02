@@ -83,10 +83,21 @@ ul {
     list-style-type: none;
     padding-left: 0px;
     text-align: center;
-  }
+}
+
+li {
+    margin: 0px;
+}
 
 .btn-nav {
+    margin: 0px;
+    padding: 10px;
     cursor: pointer;
+    transition: background-color 0.2s ease-in;
+}
+
+.btn-nav:hover {
+    background-color: white;
 }
 
 h2 {
