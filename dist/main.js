@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction loadHome() {\n    \n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadHome);\n\n//# sourceURL=webpack://top-todo-list/./src/home.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction loadHome() {\n    const content = document.getElementById(\"content\")\n    const head = document.createElement(\"h2\")\n    head.textContent = \"All Projects\"\n\n    content.appendChild(head)\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadHome);\n\n//# sourceURL=webpack://top-todo-list/./src/home.js?");
 
 /***/ }),
 
@@ -46,7 +46,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ini
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _date__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./date */ \"./src/date.js\");\n/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home */ \"./src/home.js\");\n/* harmony import */ var _showNav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./showNav */ \"./src/showNav.js\");\n\n\n\n\nfunction initialize() {\n    (0,_date__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n    ;(0,_showNav__WEBPACK_IMPORTED_MODULE_2__[\"default\"])()\n    ;(0,_home__WEBPACK_IMPORTED_MODULE_1__[\"default\"])()\n    \n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initialize);\n\n//# sourceURL=webpack://top-todo-list/./src/initialize.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _date__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./date */ \"./src/date.js\");\n/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home */ \"./src/home.js\");\n/* harmony import */ var _showNav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./showNav */ \"./src/showNav.js\");\n/* harmony import */ var _reset__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./reset */ \"./src/reset.js\");\n\n\n\n\n\nfunction initialize() {\n    (0,_date__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n    ;(0,_showNav__WEBPACK_IMPORTED_MODULE_2__[\"default\"])()\n    ;(0,_reset__WEBPACK_IMPORTED_MODULE_3__[\"default\"])()\n    ;(0,_home__WEBPACK_IMPORTED_MODULE_1__[\"default\"])()\n    \n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initialize);\n\n//# sourceURL=webpack://top-todo-list/./src/initialize.js?");
+
+/***/ }),
+
+/***/ "./src/reset.js":
+/*!**********************!*\
+  !*** ./src/reset.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction resetContent () {\n    const content = document.getElementById(\"content\")\n    content.childNodes.forEach(n => n.remove())\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (resetContent);\n\n//# sourceURL=webpack://top-todo-list/./src/reset.js?");
 
 /***/ }),
 
