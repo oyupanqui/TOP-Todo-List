@@ -1,14 +1,13 @@
 function showNav() {
     const navIcon = document.getElementById("sandwich")
+    const navPanel = document.getElementById("nav")
     navIcon.addEventListener("click", function () {
-        if (navIcon.classList.contains("active")) {
-            navIcon.classList.replace("active", "inactive")
-            document.getElementsByTagName("nav")[0].style.display = "none"
+        if (navPanel.classList.contains("nav-active")) {
+            navPanel.classList.replace("nav-active", "nav-inactive")
+            
         } else {
-            navIcon.classList.replace("inactive", "active")
-            document.getElementsByTagName("nav")[0].style.display = "flex"
+            navPanel.classList.replace("nav-inactive", "nav-active")
         }
     })
-    return navIcon
 }
 export default showNav
