@@ -56,7 +56,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction showNav() {\n    const navIcon = document.getElementById(\"menu-svg\")\n    navIcon.addEventListener(\"click\", function () {\n        alert(\"hi\")\n    })\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (showNav);\n\n//# sourceURL=webpack://top-todo-list/./src/showNav.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction showNav() {\n    const navIcon = document.getElementById(\"sandwich\")\n    navIcon.addEventListener(\"click\", function () {\n        if (navIcon.classList.contains(\"active\")) {\n            navIcon.classList.replace(\"active\", \"inactive\")\n            document.getElementsByTagName(\"nav\")[0].style.display = \"none\"\n        } else {\n            navIcon.classList.replace(\"inactive\", \"active\")\n            document.getElementsByTagName(\"nav\")[0].style.display = \"flex\"\n        }\n    })\n    return navIcon\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (showNav);\n\n//# sourceURL=webpack://top-todo-list/./src/showNav.js?");
 
 /***/ })
 
