@@ -2,7 +2,7 @@ import updateClock from './date'
 import loadHome from './home'
 import showNav from './showNav'
 import resetContent from './reset'
-import checkStorage from './projects'
+import { checkStorage, addProjectsNav } from './projects'
 
 function initialize() {
     updateClock()
@@ -10,6 +10,7 @@ function initialize() {
     resetContent()
     loadHome()
     checkStorage()
+    addProjectsNav()
 }
 
 export default initialize
