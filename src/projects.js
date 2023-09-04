@@ -26,7 +26,17 @@ export function addProjectsNav () {
         const projElem = document.createElement("h3")
         projElem.classList.add("btn-nav")
         projElem.textContent = p.title
-        projElem.style.backgroundColor = p.color
+        
+        projElem.addEventListener("mouseover", (e) => {
+            projElem.style.backgroundColor = p.color
+            return e
+        })
+
+        projElem.addEventListener("mouseout", (e) => {
+            projElem.style.backgroundColor = "#00000000"
+            return e
+        })
+
         listElem.appendChild(projElem)
     })
     console.log("done")
