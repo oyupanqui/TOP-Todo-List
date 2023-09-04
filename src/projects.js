@@ -25,6 +25,7 @@ export function addProjectsNav () {
 
         const projElem = document.createElement("h3")
         projElem.classList.add("btn-nav")
+        projElem.classList.add(p.title.toLowerCase().replaceAll(" ", "-"))
         projElem.textContent = p.title
         
         projElem.addEventListener("mouseover", (e) => {
