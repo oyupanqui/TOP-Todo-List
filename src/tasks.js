@@ -1,5 +1,4 @@
 let myTasks = []
-let myProjects = []
 
 function Task (title, description, dueDate, priority, notes, check, project) {
     this.title = title
@@ -11,17 +10,4 @@ function Task (title, description, dueDate, priority, notes, check, project) {
     this.project = project
 }
 
-function Project (title, color) {
-    this.title = title
-    this.color = color
-}
 
-function checkStorage () {
-    if (localStorage.length === 0) {
-        myProjects.push(new Project("My Default Project", "#ff0000"))
-        localStorage.setItem("project", JSON.stringify(myProjects))
-    }
-    return localStorage
-}
-
-export default checkStorage
