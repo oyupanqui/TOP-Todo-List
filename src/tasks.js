@@ -16,10 +16,29 @@ export function addTasks (taskList, container) {
         const taskElem = document.createElement("div")
         taskElem.classList.add("task-div")
         
-        const taskTitle = document.createElement("h4")
-        taskTitle.textContent = d.title
-
+        const taskTitle = document.createElement("div")
+        taskTitle.textContent = "Title: " + d.title
         taskElem.appendChild(taskTitle)
+
+        const taskDate = document.createElement("div")
+        taskDate.textContent = "Due date: " + d.dueDate
+        taskElem.appendChild(taskDate)
+
+        const taskPriority = document.createElement("div")
+        taskPriority.textContent = "Priority: " + d.priority
+        taskElem.appendChild(taskPriority)
+
+        const taskCheck = document.createElement("div")
+        if (d.check === true) {
+            taskCheck.textContent = "Status: " + "done"
+        } else {
+            taskCheck.textContent = "Status: " + "pending"
+        }
+        taskElem.appendChild(taskCheck)
+
+        const taskProject = document.createElement("div")
+        taskProject.textContent = "Project: " + d.project
+        taskElem.appendChild(taskProject)
 
         container.appendChild(taskElem)
     })
