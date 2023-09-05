@@ -131,6 +131,22 @@ content {
     min-width: 80%;
     padding: 10px;
     box-sizing: border-box;
+    align-items: center;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    align-items: center;
+}
+
+.task-div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
 }
 
 footer {
