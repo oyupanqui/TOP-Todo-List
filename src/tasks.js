@@ -11,3 +11,16 @@ export function Task (title, description, dueDate, priority, notes, check, proje
     this.projID = project.toLowerCase().replaceAll(" ", "-")
 }
 
+export function addTasks (taskList, container) {
+    taskList.forEach((d) => {
+        const taskElem = document.createElement("div")
+        taskElem.classList.add("task-div")
+        
+        const taskTitle = document.createElement("h4")
+        taskTitle.textContent = d.title
+
+        taskElem.appendChild(taskTitle)
+
+        container.appendChild(taskElem)
+    })
+}
