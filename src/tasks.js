@@ -8,6 +8,6 @@ function Task (title, description, dueDate, priority, notes, check, project) {
     this.notes = notes
     this.check = check
     this.project = project
+    this.projID = project.toLowerCase().replaceAll(" ", "-")
 }
-
 
