@@ -1,3 +1,5 @@
+import { addTasks } from './tasks'
+
 function loadHome() {
     const content = document.getElementById("content")
     const head = document.createElement("h2")
@@ -11,12 +13,7 @@ function loadHome() {
     const data = JSON.parse(localStorage.getItem("task"))
     console.log(data)
 
-    data.forEach((d) => {
-        const taskElem = document.createElement("div")
-        taskElem.classList.add("task")
-        taskElem.textContent = d.title
-        taskDiv.appendChild(taskElem)
-    })
+    addTasks(data, taskDiv)
 
     content.appendChild(taskDiv)
 }
