@@ -7,7 +7,6 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/date.js":
@@ -16,6 +15,7 @@
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction updateClock () {\n    const date = document.getElementsByTagName(\"date\")[0]\n    \n    function timeNow(date) {\n        date.textContent = new Date().toLocaleString()\n    }\n\n    setInterval(function () {\n        timeNow(date)\n    }, 1000)\n    return date\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (updateClock);\n\n//# sourceURL=webpack://top-todo-list/./src/date.js?");
 
 /***/ }),
@@ -26,6 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction loadHome() {\n    const content = document.getElementById(\"content\")\n    const head = document.createElement(\"h2\")\n    head.textContent = \"All Projects\"\n\n    content.appendChild(head)\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadHome);\n\n//# sourceURL=webpack://top-todo-list/./src/home.js?");
 
 /***/ }),
@@ -36,6 +37,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _initialize__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./initialize */ \"./src/initialize.js\");\n\n\n(0,_initialize__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n\n//# sourceURL=webpack://top-todo-list/./src/index.js?");
 
 /***/ }),
@@ -46,7 +48,8 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ini
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _date__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./date */ \"./src/date.js\");\n/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home */ \"./src/home.js\");\n/* harmony import */ var _showNav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./showNav */ \"./src/showNav.js\");\n/* harmony import */ var _reset__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./reset */ \"./src/reset.js\");\n/* harmony import */ var _projects__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./projects */ \"./src/projects.js\");\n\n\n\n\n\n\nfunction initialize() {\n    (0,_date__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n    ;(0,_showNav__WEBPACK_IMPORTED_MODULE_2__[\"default\"])()\n    ;(0,_reset__WEBPACK_IMPORTED_MODULE_3__[\"default\"])()\n    ;(0,_home__WEBPACK_IMPORTED_MODULE_1__[\"default\"])()\n    ;(0,_projects__WEBPACK_IMPORTED_MODULE_4__.checkStorage)()\n    ;(0,_projects__WEBPACK_IMPORTED_MODULE_4__.addProjectsNav)()\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initialize);\n\n//# sourceURL=webpack://top-todo-list/./src/initialize.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _date__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./date */ \"./src/date.js\");\n/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home */ \"./src/home.js\");\n/* harmony import */ var _showNav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./showNav */ \"./src/showNav.js\");\n/* harmony import */ var _reset__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./reset */ \"./src/reset.js\");\n/* harmony import */ var _storage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./storage */ \"./src/storage.js\");\n/* harmony import */ var _projects__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./projects */ \"./src/projects.js\");\n\n\n\n\n\n\n\n\nfunction initialize() {\n    (0,_date__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n    ;(0,_showNav__WEBPACK_IMPORTED_MODULE_2__[\"default\"])()\n    ;(0,_reset__WEBPACK_IMPORTED_MODULE_3__[\"default\"])()\n    ;(0,_home__WEBPACK_IMPORTED_MODULE_1__[\"default\"])()\n    ;(0,_storage__WEBPACK_IMPORTED_MODULE_4__.checkStorage)()\n    ;(0,_projects__WEBPACK_IMPORTED_MODULE_5__.addProjectsNav)()\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initialize);\n\n//# sourceURL=webpack://top-todo-list/./src/initialize.js?");
 
 /***/ }),
 
@@ -56,7 +59,8 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   addProjectsNav: () => (/* binding */ addProjectsNav),\n/* harmony export */   checkStorage: () => (/* binding */ checkStorage)\n/* harmony export */ });\nlet myProjects = []\n\nfunction Project (title, color) {\n    this.title = title\n    this.color = color\n    this.projID = title.toLowerCase().replaceAll(\" \", \"-\")\n}\n\nfunction checkStorage () {\n    if (localStorage.length === 0) {\n        myProjects.push(new Project(\"My Default Project\", \"#ff0000\"))\n        localStorage.setItem(\"project\", JSON.stringify(myProjects))\n    }\n    return localStorage\n}\n\nfunction addProjectsNav () {\n    const projectsArray = JSON.parse(localStorage.getItem(\"project\"))\n    const projectsNav = document.getElementById(\"projects-nav\").parentNode\n\n    projectsArray.forEach(function (p) {\n        const listElem = document.createElement(\"li\")\n        projectsNav.appendChild(listElem)\n\n        const projElem = document.createElement(\"h3\")\n        projElem.classList.add(\"btn-nav\")\n        projElem.classList.add(p.projID)\n        projElem.textContent = p.title\n        \n        projElem.addEventListener(\"mouseover\", (e) => {\n            projElem.style.backgroundColor = p.color\n            return e\n        })\n\n        projElem.addEventListener(\"mouseout\", (e) => {\n            projElem.style.backgroundColor = \"#00000000\"\n            return e\n        })\n\n        listElem.appendChild(projElem)\n    })\n\n    return projectsArray\n}\n\n\n//# sourceURL=webpack://top-todo-list/./src/projects.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   Project: () => (/* binding */ Project),\n/* harmony export */   addProjectsNav: () => (/* binding */ addProjectsNav),\n/* harmony export */   myProjects: () => (/* binding */ myProjects)\n/* harmony export */ });\nlet myProjects = []\n\nfunction Project (title, color) {\n    this.title = title\n    this.color = color\n    this.projID = title.toLowerCase().replaceAll(\" \", \"-\")\n}\n\nfunction addProjectsNav () {\n    const projectsArray = JSON.parse(localStorage.getItem(\"project\"))\n    const projectsNav = document.getElementById(\"projects-nav\").parentNode\n\n    projectsArray.forEach(function (p) {\n        const listElem = document.createElement(\"li\")\n        projectsNav.appendChild(listElem)\n\n        const projElem = document.createElement(\"h3\")\n        projElem.classList.add(\"btn-nav\")\n        projElem.classList.add(p.projID)\n        projElem.textContent = p.title\n        \n        projElem.addEventListener(\"mouseover\", (e) => {\n            projElem.style.backgroundColor = p.color\n            return e\n        })\n\n        projElem.addEventListener(\"mouseout\", (e) => {\n            projElem.style.backgroundColor = \"#00000000\"\n            return e\n        })\n\n        listElem.appendChild(projElem)\n    })\n\n    return projectsArray\n}\n\n\n//# sourceURL=webpack://top-todo-list/./src/projects.js?");
 
 /***/ }),
 
@@ -66,6 +70,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction resetContent () {\n    const content = document.getElementById(\"content\")\n    content.childNodes.forEach(n => n.remove())\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (resetContent);\n\n//# sourceURL=webpack://top-todo-list/./src/reset.js?");
 
 /***/ }),
@@ -76,7 +81,29 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction showNav() {\n    const navIcon = document.getElementById(\"sandwich\")\n    const navPanel = document.getElementById(\"nav\")\n    navIcon.addEventListener(\"click\", function () {\n        if (navPanel.classList.contains(\"nav-active\")) {\n            navPanel.classList.replace(\"nav-active\", \"nav-inactive\")\n            \n        } else {\n            navPanel.classList.replace(\"nav-inactive\", \"nav-active\")\n        }\n    })\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (showNav);\n\n//# sourceURL=webpack://top-todo-list/./src/showNav.js?");
+
+/***/ }),
+
+/***/ "./src/storage.js":
+/*!************************!*\
+  !*** ./src/storage.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   checkStorage: () => (/* binding */ checkStorage)\n/* harmony export */ });\n/* harmony import */ var _projects__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./projects */ \"./src/projects.js\");\n/* harmony import */ var _tasks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tasks */ \"./src/tasks.js\");\n/* harmony import */ var _tasks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_tasks__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\nfunction checkStorage () {\n    if (localStorage.length === 0) {\n        _projects__WEBPACK_IMPORTED_MODULE_0__.myProjects.push(new _projects__WEBPACK_IMPORTED_MODULE_0__.Project(\"My Default Project\", \"#ff0000\"))\n        localStorage.setItem(\"project\", JSON.stringify(_projects__WEBPACK_IMPORTED_MODULE_0__.myProjects))\n    }\n    return localStorage\n}\n\n\n\n//# sourceURL=webpack://top-todo-list/./src/storage.js?");
+
+/***/ }),
+
+/***/ "./src/tasks.js":
+/*!**********************!*\
+  !*** ./src/tasks.js ***!
+  \**********************/
+/***/ (() => {
+
+eval("let myTasks = []\n\nfunction Task (title, description, dueDate, priority, notes, check, project) {\n    this.title = title\n    this.description = description\n    this.dueDate = dueDate\n    this.priority = priority\n    this.notes = notes\n    this.check = check\n    this.project = project\n    this.projID = project.toLowerCase().replaceAll(\" \", \"-\")\n}\n\n\n\n//# sourceURL=webpack://top-todo-list/./src/tasks.js?");
 
 /***/ })
 
@@ -107,6 +134,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
