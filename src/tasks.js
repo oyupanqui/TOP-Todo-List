@@ -1,6 +1,6 @@
-let myTasks = []
+export let myTasks = []
 
-function Task (title, description, dueDate, priority, notes, check, project) {
+export function Task (title, description, dueDate, priority, notes, check, project) {
     this.title = title
     this.description = description
     this.dueDate = dueDate
