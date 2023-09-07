@@ -42,29 +42,29 @@
     </footer>
 
     <div class="blank"></div>
-    <div class="form inactive" id="formDiv">
+    <div class="form-task inactive" id="form-task-div">
         <form id="task-form">
             <h2>Create a Task!</h2>
-            <input type="text" name="title" placeholder="Title" id="form-title" required>
-            <input type="text" name="description" placeholder="Description" id="form-description">
-            <input type="date" name="dueDate" placeholder="Due Date" id="form-date" required>
-            <select name="riority" id="form-priority" form="task-form">
+            <input type="text" name="title" placeholder="Title" id="form-task-title" required>
+            <input type="text" name="description" placeholder="Description" id="form-task-description">
+            <input type="date" name="dueDate" placeholder="Due Date" id="form-task-date" required>
+            <select name="priority" id="form-priority" form="form-task-div">
                 <option value="high">High Priority</option>
                 <option value="medium">Medium Priority</option>
-                <option value="medium">Low Priority</option>
+                <option value="low">Low Priority</option>
             </select>
-            <input type="text" name="notes" placeholder="Notes" id="form-notes">
-            <div class="is-done">
+            <input type="text" name="notes" placeholder="Notes" id="form-task-notes">
+            <div class="task-done">
                 <label>Is the task done?</label>
-                <input type="checkbox" id="form-check">
+                <input type="checkbox" id="form-task-check">
             </div>
-            <select name="project" id="form-project" form="task-form">
+            <select name="project" id="form-task-project" form="form-task-div">
                 <option value="my-default-project">My Default Project</option>
                 <option value="urgent-project">Urgent Project</option>
             </select>
-            <div class="confirmation">
-                <button type="submit" name="submit" id="confirm-form">Add task</button>
-                <div class="cancel" id="cancel-form">Cancel</div>
+            <div class="task-confirmation">
+                <button type="submit" name="submit" id="form-task-confirmation">Add task</button>
+                <div class="cancel" id="form-task-cancel">Cancel</div>
             </div>
         </form>
     </div>
