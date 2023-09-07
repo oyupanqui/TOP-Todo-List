@@ -40,5 +40,34 @@
         <p>Copyright © 2023 oyupanqui</p>
         <a href="https://github.com/oyupanqui" target="_blank"><i class="fa-brands fa-github" id="github" style="color: #000000;"></i></a>
     </footer>
+
+    <div class="blank"></div>
+    <div class="form inactive" id="formDiv">
+        <form id="task-form">
+            <h2>Create a Task!</h2>
+            <input type="text" name="title" placeholder="Title" id="form-title" required>
+            <input type="text" name="description" placeholder="Description" id="form-description">
+            <input type="date" name="dueDate" placeholder="Due Date" id="form-date" required>
+            <select name="riority" id="form-priority" form="task-form">
+                <option value="high">High Priority</option>
+                <option value="medium">Medium Priority</option>
+                <option value="medium">Low Priority</option>
+            </select>
+            <input type="text" name="notes" placeholder="Notes" id="form-notes">
+            <div class="is-done">
+                <label>Is the task done?</label>
+                <input type="checkbox" id="form-check">
+            </div>
+            <select name="project" id="form-project" form="task-form">
+                <option value="my-default-project">My Default Project</option>
+                <option value="urgent-project">Urgent Project</option>
+            </select>
+            <div class="confirmation">
+                <button type="submit" name="submit" id="confirm-form">Add task</button>
+                <div class="cancel" id="cancel-form">Cancel</div>
+            </div>
+        </form>
+    </div>
+
 </body>
 </html>
