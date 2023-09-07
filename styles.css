@@ -165,19 +165,21 @@ footer {
     height: 20px;
 }
 
-.form {
-    position: fixed;
-    height: 420px;
-    width: 400px;
+/* Form Task CSS */
+
+.form-task, .form-project {
+    position: fixed !important;
+    height: auto;
+    width: auto;
     background-color: white;
     border-color: black;
     border-style: solid;
     border-radius: 30px;
-    top: 50%;
-    left: 50%;
-    margin-top: -175px;
-    margin-left: -200px;
     padding: 20px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
 }
 
 @keyframes fade-in {
@@ -219,30 +221,31 @@ form {
     gap: 20px;
 }
 
-h2 {
-    font-size: 1.5em;
-}
-
 input {
-    font-size: 1.2em;
+    font-size: 1em;
     border: none;
     padding: 10px;
     border-radius: 10px;
     background-color: #fef3c7;
 }
 
-.confirmation {
+#form-project-color {
+    padding: 3px;
+}
+
+.task-confirmation, .project-confirmation {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 50px
+    width: 100%;
+    justify-content: space-evenly;
 }
 
-#cancel {
+.cancel {
     display: flex;
     justify-content: center;
-    width: 80.047px;
-    height: 35px;
+    width: auto;
+    height: auto;
     text-align: center;
     font-size: 1.2em;
     padding: 10px;
@@ -253,12 +256,12 @@ input {
     background-color: rgba(255, 0, 0, 0.7);
 }
 
-#confirm {
+.confirm {
     box-sizing: content-box;
     display: flex;
     justify-content: center;
-    width: 80.047px;
-    height: 35px;
+    width: auto;
+    height: auto;
     text-align: center;
     font-size: 1.2em;
     padding: 10px;
@@ -280,3 +283,4 @@ input {
     top: 0;
     left: 0;
 }
+
