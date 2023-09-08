@@ -4,7 +4,7 @@ import showNav from './showNav'
 import resetContent from './reset'
 import { checkStorage } from './storage'
 import { addProjectsNav } from './projects'
-import addTaskControl from './form'
+import { addControlBtns, addFormBtns} from './form'
 
 
 function initialize() {
@@ -14,7 +14,8 @@ function initialize() {
     loadHome()
     checkStorage()
     addProjectsNav()
-    addTaskControl()
+    addControlBtns()
+    addFormBtns()
 }
 
 export default initialize
