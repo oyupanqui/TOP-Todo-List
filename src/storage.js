@@ -20,10 +20,23 @@ export function addStorageTask () {
         const formDate = document.getElementById("form-task-date").value
         const formPriority = document.getElementById("form-priority").value
         const formNotes = document.getElementById("form-task-notes").value
-        const formCheck = document.getElementById("form-task-check").value
+        const formCheck = document.getElementById("form-task-check").checked
         const formProj = document.getElementById("form-task-project").value
         
         const newTask = new Task (formTitle, formDescription, formDate, formPriority, formNotes, formCheck, formProj)
+        console.log(newTask)
     })
     return taskConfirm
+}
+
+export function addStorageProj () {
+    const projConfirm = document.getElementById("form-project-confirmation")
+    projConfirm.addEventListener("click", function () {
+        const formTitle = document.getElementById("form-project-title").value
+        const formColor = document.getElementById("form-project-color").value
+        
+        const newProject = new Project (formTitle, formColor)
+        console.log(newProject)
+    })
+    return projConfirm
 }
