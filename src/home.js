@@ -11,7 +11,6 @@ function loadHome() {
     taskDiv.classList.add("task-list")
 
     const data = JSON.parse(localStorage.getItem("task"))
-    console.log(data)
 
     addTasks(data, taskDiv)
 
