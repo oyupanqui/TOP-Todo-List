@@ -9,7 +9,7 @@ function loadHome() {
 
     const taskDiv = document.createElement("div")
     taskDiv.classList.add("task-list")
-
+    
     const data = JSON.parse(localStorage.getItem("task"))
 
     addTasks(data, taskDiv)
