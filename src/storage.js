@@ -12,3 +12,18 @@ export function checkStorage () {
     return localStorage
 }
 
+export function addStorageTask () {
+    const taskConfirm = document.getElementById("form-task-confirmation")
+    taskConfirm.addEventListener("click", function () {
+        const formTitle = document.getElementById("form-task-title").value
+        const formDescription = document.getElementById("form-task-description").value
+        const formDate = document.getElementById("form-task-date").value
+        const formPriority = document.getElementById("form-priority").value
+        const formNotes = document.getElementById("form-task-notes").value
+        const formCheck = document.getElementById("form-task-check").value
+        const formProj = document.getElementById("form-task-project").value
+        
+        const newTask = new Task (formTitle, formDescription, formDate, formPriority, formNotes, formCheck, formProj)
+    })
+    return taskConfirm
+}
