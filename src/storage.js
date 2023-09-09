@@ -34,6 +34,8 @@ export function checkStorage () {
 }
 
 export function addStorageTask () {
+    const content = document.getElementById("content")
+
     const taskConfirm = document.getElementById("form-task-confirmation")
     taskConfirm.addEventListener("click", function () {
         const formTitle = document.getElementById("form-task-title").value
@@ -57,7 +59,6 @@ export function addStorageProj () {
         const formColor = document.getElementById("form-project-color").value
         
         const newProject = new Project (formTitle, formColor)
-        console.log(newProject)
         projectToStorage(newProject)
     })
     return projConfirm
