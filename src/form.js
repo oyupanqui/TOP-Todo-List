@@ -1,21 +1,25 @@
-import { addStorageTask, addStorageProj } from './storage'
+import { parseTaskForm, parseProjectForm } from './storage'
 
-function openForm(div){
+/* Open and close form*/
+
+function openForm (div) {
     div.classList.add("active")
     div.classList.remove("inactive")
 }
 
-function closeForm(div, form){
+function closeForm (div, form) {
     div.classList.add("deactivating")
     div.classList.remove("active")
     removeBlank()
 
-    setTimeout(()=>{
+    setTimeout(() => {
         div.classList.add("inactive")
         div.classList.remove("deactivating")
         form.reset()
     }, 1000)
 }
+
+/* Add and remove blank background*/
 
 function addBlank () {
     document.getElementsByClassName("blank")[0].style.display = "block"
@@ -25,29 +29,9 @@ function removeBlank () {
     document.getElementsByClassName("blank")[0].style.display = "none"
 }
 
-function formTaskConfirm (div, btn, form) {
-    addStorageTask()
-    removeBlank()
-    form.addEventListener("submit", (e) => {
-        e.preventDefault()
-    })
-    btn.addEventListener("click", function () {
-        closeForm(div, form)
-    })
-}
+/* Functions to open the form*/
 
-function formProjConfirm (div, btn, form) {
-    addStorageProj()
-    removeBlank()
-    form.addEventListener("submit", (e) => {
-        e.preventDefault()
-    })
-    btn.addEventListener("click", function () {
-        closeForm(div, form)
-    })
-}
-
-export function addControlBtns () {
+export function addSubmitBtns () {
     const taskBtn = document.getElementById("form-task-div")
     const createTaskBtn = document.getElementById("add-task")
     createTaskBtn.addEventListener("click", function () {
@@ -63,6 +47,32 @@ export function addControlBtns () {
     })
     return createTaskBtn, createProjBtn
 }
+
+/* Form  confirmation*/
+
+function formTaskConfirm (div, btn, form) {
+    parseTaskForm()
+    removeBlank()
+    form.addEventListener("submit", (e) => {
+        e.preventDefault()
+    })
+    btn.addEventListener("click", function () {
+        closeForm(div, form)
+    })
+}
+
+function formProjConfirm (div, btn, form) {
+    parseProjectForm()
+    removeBlank()
+    form.addEventListener("submit", (e) => {
+        e.preventDefault()
+    })
+    btn.addEventListener("click", function () {
+        closeForm(div, form)
+    })
+}
+
+/* Form  confirmation*/
 
 export function addFormBtns () {
     const taskForm = document.getElementById("task-form")

@@ -1,3 +1,5 @@
+import { resetTaskList } from './reset'
+
 export let myTasks = []
 
 export function Task (title, description, dueDate, priority, notes, check, project) {
@@ -12,6 +14,7 @@ export function Task (title, description, dueDate, priority, notes, check, proje
 }
 
 export function addTasks (taskList, container) {
+    resetTaskList()
     taskList.forEach((d) => {
         const taskElem = document.createElement("div")
         taskElem.classList.add("task-div")

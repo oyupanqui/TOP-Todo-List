@@ -1,6 +1,8 @@
 import { myProjects, Project } from './projects'
 import { myTasks, Task } from './tasks'
 
+/* Push data to local storage*/
+
 function taskToStorage (task) {
     myTasks.push(task)
     localStorage.setItem("task", JSON.stringify(myTasks))
@@ -11,7 +13,9 @@ function projectToStorage (project) {
     localStorage.setItem("project", JSON.stringify(myProjects))
 }
 
-export function checkStorage () {
+/* Pull data from local storage*/
+
+export function pullData () {
     if (localStorage.getItem("task") === null) {
         myTasks.push(new Task("Launch of NISAR", "On January 2024 NASA's first radar mission will be launch", "2024-01-01", "high", "a very special day", false, "My Default Project"))
         localStorage.setItem("task", JSON.stringify(myTasks))
@@ -30,12 +34,12 @@ export function checkStorage () {
             return myProjects.push(newProject)
         })
     }
-    return localStorage
+    return myTasks, myProjects
 }
 
-export function addStorageTask () {
-    const content = document.getElementById("content")
+/* Parse data from the form to push data to local storage*/
 
+export function parseTaskForm () {
     const taskConfirm = document.getElementById("form-task-confirmation")
     taskConfirm.addEventListener("click", function () {
         const formTitle = document.getElementById("form-task-title").value
@@ -52,7 +56,7 @@ export function addStorageTask () {
     return taskConfirm
 }
 
-export function addStorageProj () {
+export function parseProjectForm () {
     const projConfirm = document.getElementById("form-project-confirmation")
     projConfirm.addEventListener("click", function () {
         const formTitle = document.getElementById("form-project-title").value

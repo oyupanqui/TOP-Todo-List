@@ -1,4 +1,6 @@
-import { addTasks } from './tasks'
+import { pullData } from './storage'
+import { myTasks, addTasks } from './tasks'
+import { resetTaskList } from './reset'
 
 function loadHome() {
     const content = document.getElementById("content")
@@ -10,11 +12,16 @@ function loadHome() {
     const taskDiv = document.createElement("div")
     taskDiv.classList.add("task-list")
     
-    const data = JSON.parse(localStorage.getItem("task"))
+    pullData()
 
-    addTasks(data, taskDiv)
+    addTasks(myTasks, taskDiv)
 
     content.appendChild(taskDiv)
+
+    document.getElementById("form-task-confirmation").addEventListener("click", function () {
+        resetTaskList()
+        addTasks(myTasks, taskDiv, true)
+    })
 }
 
 export default loadHome
