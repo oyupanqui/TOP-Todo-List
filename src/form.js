@@ -1,4 +1,4 @@
-import { addStorageTask } from './storage'
+import { addStorageTask, addStorageProj } from './storage'
 
 function openForm(div){
     div.classList.add("active")
@@ -25,8 +25,19 @@ function removeBlank () {
     document.getElementsByClassName("blank")[0].style.display = "none"
 }
 
-function formConfirm (div, btn, form) {
+function formTaskConfirm (div, btn, form) {
     addStorageTask()
+    removeBlank()
+    form.addEventListener("submit", (e) => {
+        e.preventDefault()
+    })
+    btn.addEventListener("click", function () {
+        closeForm(div, form)
+    })
+}
+
+function formProjConfirm (div, btn, form) {
+    addStorageProj()
     removeBlank()
     form.addEventListener("submit", (e) => {
         e.preventDefault()
@@ -63,8 +74,8 @@ export function addFormBtns () {
     const taskFormDiv = document.getElementById("form-task-div")
     const projFormDiv = document.getElementById("form-project-div")
 
-    formConfirm(taskFormDiv, taskFormConfirm, taskForm)
-    formConfirm(projFormDiv, projFormConfirm, projForm)
+    formTaskConfirm(taskFormDiv, taskFormConfirm, taskForm)
+    formProjConfirm(projFormDiv, projFormConfirm, projForm)
 
     const taskFormCancel = document.getElementById("form-task-cancel")
     const projFormCancel = document.getElementById("form-project-cancel")
