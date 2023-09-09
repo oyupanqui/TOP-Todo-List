@@ -1,16 +1,18 @@
-function openForm(elem){
-    elem.classList.add("active")
-    elem.classList.remove("inactive")
+import { addStorageTask } from './storage'
+
+function openForm(div){
+    div.classList.add("active")
+    div.classList.remove("inactive")
 }
 
-function closeForm(elem, form){
-    elem.classList.add("deactivating")
-    elem.classList.remove("active")
+function closeForm(div, form){
+    div.classList.add("deactivating")
+    div.classList.remove("active")
     removeBlank()
 
     setTimeout(()=>{
-        elem.classList.add("inactive")
-        elem.classList.remove("deactivating")
+        div.classList.add("inactive")
+        div.classList.remove("deactivating")
         form.reset()
     }, 1000)
 }
@@ -23,13 +25,15 @@ function removeBlank () {
     document.getElementsByClassName("blank")[0].style.display = "none"
 }
 
-function formConfirm (elem) {
+function formConfirm (div, btn, form) {
+    addStorageTask()
     removeBlank()
-    elem.addEventListener("submit", (e) => {
+    form.addEventListener("submit", (e) => {
         e.preventDefault()
-        closeForm()
     })
-    return elem
+    btn.addEventListener("click", function () {
+        closeForm(div, form)
+    })
 }
 
 export function addControlBtns () {
@@ -55,18 +59,22 @@ export function addFormBtns () {
 
     const taskFormConfirm = document.getElementById("form-task-confirmation")
     const projFormConfirm = document.getElementById("form-project-confirmation")
-    formConfirm(taskFormConfirm)
-    formConfirm(projFormConfirm)
+
+    const taskFormDiv = document.getElementById("form-task-div")
+    const projFormDiv = document.getElementById("form-project-div")
+
+    formConfirm(taskFormDiv, taskFormConfirm, taskForm)
+    formConfirm(projFormDiv, projFormConfirm, projForm)
 
     const taskFormCancel = document.getElementById("form-task-cancel")
     const projFormCancel = document.getElementById("form-project-cancel")
 
     taskFormCancel.addEventListener("click", () => {
-        closeForm(document.getElementById("form-task-div"), taskForm)
+        closeForm(taskFormDiv, taskForm)
     })
         
     projFormCancel.addEventListener("click", () => {
-        closeForm(document.getElementById("form-project-div"), projForm)
+        closeForm(projFormDiv, projForm)
     })
     return taskFormConfirm, projFormConfirm, taskFormCancel, projFormCancel
 }
