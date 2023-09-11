@@ -1,8 +1,10 @@
 import { parseTaskForm, parseProjectForm } from './storage'
+import { projectSelection } from './projects'
 
 /* Open and close form*/
 
 function openForm (div) {
+    projectSelection()
     div.classList.add("active")
     div.classList.remove("inactive")
 }
