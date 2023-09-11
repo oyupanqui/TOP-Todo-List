@@ -34,3 +34,13 @@ export function addProjectsNav () {
 
     return projectsArray
 }
+
+export function projectSelection () {
+    const selectProject = document.getElementById("form-task-project")
+    myProjects.forEach(proj => {
+        const option = document.createElement("option")
+        option.setAttribute("value", proj.projID)
+        option.textContent = proj.title
+        selectProject.appendChild(option)
+    })
+}
