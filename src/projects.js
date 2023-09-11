@@ -8,8 +8,8 @@ export function Project (title, color) {
 
 export function addProjectsNav () {
     const projectsArray = JSON.parse(localStorage.getItem("project"))
-    const projectsNav = document.getElementById("projects-nav").parentNode
-
+    const projectsNav = document.getElementById("projects-list")
+    projectsNav.innerHTML = ''
     projectsArray.forEach(function (p) {
         const listElem = document.createElement("li")
         projectsNav.appendChild(listElem)
