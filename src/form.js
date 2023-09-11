@@ -1,5 +1,5 @@
 import { parseTaskForm, parseProjectForm } from './storage'
-import { projectSelection } from './projects'
+import { projectSelection, addProjectsNav } from './projects'
 
 /* Open and close form*/
 
@@ -71,7 +71,9 @@ function formProjConfirm (div, btn, form) {
     })
     btn.addEventListener("click", function () {
         closeForm(div, form)
+        addProjectsNav()
     })
+    addProjectsNav()
 }
 
 /* Form  confirmation*/
