@@ -41,7 +41,7 @@ export function projectSelection () {
 
     myProjects.forEach(proj => {
         const option = document.createElement("option")
-        option.setAttribute("value", proj.projID)
+        option.setAttribute("value", proj.title)
         option.textContent = proj.title
         selectProject.appendChild(option)
     })
