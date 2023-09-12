@@ -23,6 +23,8 @@ export function pullData () {
 
     if (localStorage.getItem("project") === null) {
         myProjects.push(new Project("My Default Project", "#ff0000"))
+        myProjects.push(new Project("Home", "#0000FF"))
+        myProjects.push(new Project("Garden", "#00FF00"))
         localStorage.setItem("project", JSON.stringify(myProjects))
     } else {
         JSON.parse(localStorage.getItem("task")).map(function (task) {
