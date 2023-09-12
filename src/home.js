@@ -1,8 +1,7 @@
-import { pullData } from './storage'
 import { myTasks, addTasks } from './tasks'
 import { resetTaskList } from './reset'
 
-function loadHome() {
+function loadHome() {   
     const content = document.getElementById("content")
     const head = document.createElement("h2")
     head.textContent = "All Projects"
@@ -12,8 +11,6 @@ function loadHome() {
     const taskDiv = document.createElement("div")
     taskDiv.classList.add("task-list")
     
-    pullData()
-
     addTasks(myTasks, taskDiv)
 
     content.appendChild(taskDiv)

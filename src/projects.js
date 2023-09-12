@@ -37,6 +37,8 @@ export function addProjectsNav () {
 
 export function projectSelection () {
     const selectProject = document.getElementById("form-task-project")
+    selectProject.innerHTML = ''
+
     myProjects.forEach(proj => {
         const option = document.createElement("option")
         option.setAttribute("value", proj.projID)
