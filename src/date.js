@@ -1,4 +1,6 @@
-function updateClock () {
+import { add, format } from 'date-fns'
+
+export function updateClock () {
     const date = document.getElementsByTagName("date")[0]
     
     function timeNow(date) {
@@ -11,4 +13,8 @@ function updateClock () {
     return date
 }
 
-export default updateClock
+export function addTime (dateUnits, dateAmount) {
+    let obj = new Object()
+    obj[dateUnits] = dateAmount
+    return format(add(new Date(), obj), 'yyyy-MM-dd')
+}
