@@ -1,5 +1,6 @@
 import { myProjects, Project } from './projects'
 import { myTasks, Task } from './tasks'
+import { addTime } from './date'
 
 /* Push data to local storage*/
 
@@ -17,7 +18,9 @@ function projectToStorage (project) {
 
 export function pullData () {
     if (localStorage.getItem("task") === null) {
-        myTasks.push(new Task("Launch of NISAR", "On January 2024 NASA's first radar mission will be launch", "2024-01-01", "high", "a very special day", false, "My Default Project"))
+        myTasks.push(new Task("Launch of NISAR", "On January 2024 NASA's first radar mission will be launch", "2024-01-01", "high", "A very special day", false, "My Default Project"))
+        myTasks.push(new Task("Clean bedroom", "Be patient", addTime('days', 1), "low", "Buy rags", false, "Home"))
+        myTasks.push(new Task("Cut the lawn", "Mow the grass", addTime('weeks', 1), "medium", "Will take some time", false, "Garden"))
         localStorage.setItem("task", JSON.stringify(myTasks))
     }
 
