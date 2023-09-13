@@ -1,4 +1,4 @@
-import updateClock from './date'
+import { updateClock } from './date'
 import loadHome from './home'
 import showNav from './showNav'
 import { resetContent } from './reset'
