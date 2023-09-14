@@ -4,8 +4,8 @@ import { pullData } from './storage'
 import { resetContent } from './reset'
 
 export function loadHome() {
-    resetContent()
     pullData()
+    resetContent()
     const content = document.getElementById("content")
     const head = document.createElement("h2")
     head.textContent = "All Tasks"
@@ -23,4 +23,5 @@ export function loadHome() {
         resetTaskList()
         addTasks(myTasks, taskDiv, true)
     })
+    pullData()
 }
