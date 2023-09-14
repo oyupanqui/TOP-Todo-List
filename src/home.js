@@ -1,7 +1,9 @@
 import { myTasks, addTasks } from './tasks'
 import { resetTaskList } from './reset'
+import { pullData } from './storage'
 
-export function loadHome() {   
+export function loadHome() {
+    pullData()
     const content = document.getElementById("content")
     const head = document.createElement("h2")
     head.textContent = "All Tasks"
