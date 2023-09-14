@@ -3,7 +3,7 @@ import { resetTaskList } from './reset'
 import { pullData } from './storage'
 import { resetContent } from './reset'
 
-export function loadHome() {
+export function loadHome (init) {
     pullData()
     resetContent()
     const content = document.getElementById("content")
@@ -19,8 +19,10 @@ export function loadHome() {
 
     content.appendChild(taskDiv)
 
-    document.getElementById("form-task-confirmation").addEventListener("click", function () {
-        resetTaskList()
-        addTasks(myTasks, taskDiv, true)
-    })
+    if (init) {
+        document.getElementById("form-task-confirmation").addEventListener("click", function () {
+            resetTaskList()
+            addTasks(myTasks, taskDiv, true)
+        })
+    }
 }
