@@ -4,7 +4,7 @@ import { resetTaskList } from './reset'
 function loadHome() {   
     const content = document.getElementById("content")
     const head = document.createElement("h2")
-    head.textContent = "All Projects"
+    head.textContent = "All Tasks"
 
     content.appendChild(head)
 
