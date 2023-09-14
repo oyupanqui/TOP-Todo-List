@@ -30,6 +30,8 @@ export function pullData () {
         myProjects.push(new Project("Garden", "#00FF00"))
         localStorage.setItem("project", JSON.stringify(myProjects))
     } else {
+        myTasks.length = 0
+        myProjects.length = 0
         JSON.parse(localStorage.getItem("task")).map(function (task) {
             let newTask = new Task(task.title, task.description, task.dueDate, task.priority, task.notes, task.check, task.project, task.project.toLowerCase().replaceAll(" ", "-"))
             return myTasks.push(newTask)
