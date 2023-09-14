@@ -1,6 +1,8 @@
 export function resetContent () {
     const content = document.getElementById("content")
-    content.childNodes.forEach(n => n.remove())
+    for (let i = 0; content.childNodes.length; i++) {
+        content.removeChild(content.lastChild)
+    }
 }
 
 export function resetTaskList () {
