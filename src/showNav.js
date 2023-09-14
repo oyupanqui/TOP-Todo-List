@@ -1,4 +1,4 @@
-function showNav() {
+export function showNav() {
     const navIcon = document.getElementById("sandwich")
     const navPanel = document.getElementById("nav")
     navIcon.addEventListener("click", function () {
@@ -10,4 +10,3 @@ function showNav() {
         }
     })
 }
-export default showNav

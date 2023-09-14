@@ -1,7 +1,7 @@
 import { myTasks, addTasks } from './tasks'
 import { resetTaskList } from './reset'
 
-function loadHome() {   
+export function loadHome() {   
     const content = document.getElementById("content")
     const head = document.createElement("h2")
     head.textContent = "All Tasks"
@@ -20,5 +20,3 @@ function loadHome() {
         addTasks(myTasks, taskDiv, true)
     })
 }
-
-export default loadHome
