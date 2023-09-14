@@ -3,6 +3,7 @@ import { loadHome } from './home'
 import { showNav } from './navigator'
 import { addSubmitBtns, addFormBtns} from './form'
 import { pullData } from './storage'
+import { homeListener } from './navigator'
 
 function initialize() {
     pullData()
@@ -10,6 +11,7 @@ function initialize() {
     showNav()
     addSubmitBtns()
     addFormBtns()
+    homeListener()
     loadHome()
 }
 
