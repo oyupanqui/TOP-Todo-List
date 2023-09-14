@@ -146,7 +146,7 @@ content {
     align-items: center;
 }
 
-.task-div {
+.task-div, .proj-div {
     display: flex;
     flex-direction: row;
     width: 95%;
