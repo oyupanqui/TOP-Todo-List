@@ -1,8 +1,10 @@
 import { myTasks, addTasks } from './tasks'
 import { resetTaskList } from './reset'
 import { pullData } from './storage'
+import { resetContent } from './reset'
 
 export function loadHome() {
+    resetContent()
     pullData()
     const content = document.getElementById("content")
     const head = document.createElement("h2")
