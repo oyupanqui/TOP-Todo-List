@@ -1,3 +1,6 @@
+import { resetProjectList, resetContent } from './reset'
+import { pullData } from './storage'
+
 export let myProjects = []
 
 export function Project (title, color) {
@@ -45,4 +48,39 @@ export function projectSelection () {
         option.textContent = proj.title
         selectProject.appendChild(option)
     })
+}
+
+export function addProjects (projectList, container) {
+    resetProjectList()
+    projectList.forEach((d) => {
+        const projElem = document.createElement("div")
+        projElem.classList.add("proj-div")
+        
+        const projTitle = document.createElement("div")
+        projTitle.textContent = "Title: " + d.title
+        projElem.appendChild(projTitle)
+
+        const projColor = document.createElement("div")
+        projColor.textContent = "Color: " + d.color
+        projElem.appendChild(projColor)
+
+        container.appendChild(projElem)
+    })
+}
+
+export function loadAllProjects () {
+    pullData()
+    resetContent()
+    const content = document.getElementById("content")
+    const head = document.createElement("h2")
+    head.textContent = "All Projects"
+
+    content.appendChild(head)
+
+    const projDiv = document.createElement("div")
+    projDiv.classList.add("task-list")
+    
+    addProjects(myProjects, projDiv)
+
+    content.appendChild(projDiv)
 }
