@@ -436,7 +436,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ini
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _date__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./date */ \"./src/date.js\");\n/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home */ \"./src/home.js\");\n/* harmony import */ var _showNav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./showNav */ \"./src/showNav.js\");\n/* harmony import */ var _form__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./form */ \"./src/form.js\");\n/* harmony import */ var _storage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./storage */ \"./src/storage.js\");\n\n\n\n\n\n\nfunction initialize() {\n    (0,_storage__WEBPACK_IMPORTED_MODULE_4__.pullData)()\n    ;(0,_date__WEBPACK_IMPORTED_MODULE_0__.updateClock)()\n    ;(0,_showNav__WEBPACK_IMPORTED_MODULE_2__.showNav)()\n    ;(0,_form__WEBPACK_IMPORTED_MODULE_3__.addSubmitBtns)()\n    ;(0,_form__WEBPACK_IMPORTED_MODULE_3__.addFormBtns)()\n    ;(0,_home__WEBPACK_IMPORTED_MODULE_1__.loadHome)()\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initialize);\n\n//# sourceURL=webpack://top-todo-list/./src/initialize.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _date__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./date */ \"./src/date.js\");\n/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home */ \"./src/home.js\");\nObject(function webpackMissingModule() { var e = new Error(\"Cannot find module './showNav'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\n/* harmony import */ var _form__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./form */ \"./src/form.js\");\n/* harmony import */ var _storage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./storage */ \"./src/storage.js\");\n\n\n\n\n\n\nfunction initialize() {\n    (0,_storage__WEBPACK_IMPORTED_MODULE_4__.pullData)()\n    ;(0,_date__WEBPACK_IMPORTED_MODULE_0__.updateClock)()\n    Object(function webpackMissingModule() { var e = new Error(\"Cannot find module './showNav'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }())()\n    ;(0,_form__WEBPACK_IMPORTED_MODULE_3__.addSubmitBtns)()\n    ;(0,_form__WEBPACK_IMPORTED_MODULE_3__.addFormBtns)()\n    ;(0,_home__WEBPACK_IMPORTED_MODULE_1__.loadHome)()\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initialize);\n\n//# sourceURL=webpack://top-todo-list/./src/initialize.js?");
 
 /***/ }),
 
@@ -457,16 +457,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   resetContent: () => (/* binding */ resetContent),\n/* harmony export */   resetProjectList: () => (/* binding */ resetProjectList),\n/* harmony export */   resetTaskList: () => (/* binding */ resetTaskList)\n/* harmony export */ });\nfunction resetContent () {\n    const content = document.getElementById(\"content\")\n    content.childNodes.forEach(n => n.remove())\n}\n\nfunction resetTaskList () {\n    const taskDiv = document.getElementsByClassName(\"task-div\")\n    let taskLen = taskDiv.length\n    for (let i = 0; i<taskLen; i++) {\n        taskDiv[0].remove()\n    }\n}\n\nfunction resetProjectList () {\n    const projectDiv = document.getElementsByClassName(\"project-div\")\n    let projectLen = projectDiv.length\n    for (let i = 0; i<projectLen; i++) {\n        projectDiv[0].remove()\n    }\n}\n\n//# sourceURL=webpack://top-todo-list/./src/reset.js?");
-
-/***/ }),
-
-/***/ "./src/showNav.js":
-/*!************************!*\
-  !*** ./src/showNav.js ***!
-  \************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   showNav: () => (/* binding */ showNav)\n/* harmony export */ });\nfunction showNav() {\n    const navIcon = document.getElementById(\"sandwich\")\n    const navPanel = document.getElementById(\"nav\")\n    navIcon.addEventListener(\"click\", function () {\n        if (navPanel.classList.contains(\"nav-active\")) {\n            navPanel.classList.replace(\"nav-active\", \"nav-inactive\")\n            \n        } else {\n            navPanel.classList.replace(\"nav-inactive\", \"nav-active\")\n        }\n    })\n}\n\n//# sourceURL=webpack://top-todo-list/./src/showNav.js?");
 
 /***/ }),
 
