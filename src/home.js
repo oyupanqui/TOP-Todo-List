@@ -23,5 +23,4 @@ export function loadHome() {
         resetTaskList()
         addTasks(myTasks, taskDiv, true)
     })
-    pullData()
 }

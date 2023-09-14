@@ -1,6 +1,6 @@
 import { updateClock } from './date'
 import { loadHome } from './home'
-import { showNav } from './showNav'
+import { showNav } from './navigator'
 import { addSubmitBtns, addFormBtns} from './form'
 import { pullData } from './storage'
 
