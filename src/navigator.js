@@ -1,4 +1,6 @@
-export function showNav() {
+import { loadHome } from './home'
+
+export function showNav () {
     const navIcon = document.getElementById("sandwich")
     const navPanel = document.getElementById("nav")
     navIcon.addEventListener("click", function () {
@@ -8,5 +10,12 @@ export function showNav() {
         } else {
             navPanel.classList.replace("nav-inactive", "nav-active")
         }
+    })
+}
+
+export function homeListener () {
+    const allTasks = document.getElementById("all")
+    allTasks.addEventListener("click", function () {
+        loadHome()
     })
 }
