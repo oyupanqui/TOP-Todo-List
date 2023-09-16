@@ -27,6 +27,5 @@ export function addTodayTasks () {
 }
 
 function filterDate (item) {
-    return item.dueDate === format(new Date, 'yyyy-MM-dd')
+    return item.dueDate === format(new Date(), 'yyyy-MM-dd')
 }
-
