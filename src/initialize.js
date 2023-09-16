@@ -5,6 +5,7 @@ import { addSubmitBtns, addFormBtns} from './form'
 import { pullData } from './storage'
 import { homeListener, projectsListener } from './navigator'
 import { addTodayTasks } from './today'
+import { addTomorrowTasks } from './tomorrow'
 
 function initialize() {
     pullData()
@@ -16,6 +17,7 @@ function initialize() {
     homeListener()
     projectsListener()
     addTodayTasks()
+    addTomorrowTasks()
 }
 
 export default initialize
