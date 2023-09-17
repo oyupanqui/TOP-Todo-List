@@ -7,6 +7,7 @@ import { homeListener, projectsListener } from './navigator'
 import { addTodayTasks } from './today'
 import { addTomorrowTasks } from './tomorrow'
 import { addWeekTasks } from './week'
+import { addPriorityTasks } from './priority'
 
 function initialize() {
     pullData()
@@ -20,6 +21,7 @@ function initialize() {
     addTodayTasks()
     addTomorrowTasks()
     addWeekTasks()
+    addPriorityTasks()
 }
 
 export default initialize
