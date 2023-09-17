@@ -1,5 +1,6 @@
 import { resetProjectList, resetContent } from './reset'
 import { pullData } from './storage'
+import { myTasks, addTasks } from "./tasks";
 
 export let myProjects = []
 
@@ -30,6 +31,29 @@ export function addProjectsNav () {
         projElem.addEventListener("mouseout", (e) => {
             projElem.style.backgroundColor = "#00000000"
             return e
+        })
+
+        projElem.addEventListener("click", () => {
+            pullData()
+            resetContent()
+            const content = document.getElementById("content")
+            const head = document.createElement("h2")
+            head.textContent = p.title + " tasks"
+
+            content.appendChild(head)
+
+            const taskDiv = document.createElement("div")
+            taskDiv.classList.add("task-list")
+
+            function filterProject (task) {
+                return task.title === p.title
+            }
+
+            addTasks(myTasks.filter(function filterProject (task) {
+                return task.project === p.title
+            }), taskDiv)
+
+            content.appendChild(taskDiv)
         })
 
         listElem.appendChild(projElem)
