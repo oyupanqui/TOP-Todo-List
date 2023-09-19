@@ -1,4 +1,5 @@
 import { resetTaskList } from './reset'
+import { pullData } from './storage'
 
 export let myTasks = []
 
@@ -42,6 +43,24 @@ export function addTasks (taskList, container) {
         const taskProject = document.createElement("div")
         taskProject.textContent = "Project: " + d.project
         taskElem.appendChild(taskProject)
+
+        const eraseCon = document.createElement("div")
+        const deleteBtn = document.createElement("i")
+        deleteBtn.setAttribute("class", "fa-solid fa-eraser")
+        deleteBtn.setAttribute("style", "color: #000000; cursor: pointer")
+        eraseCon.appendChild(deleteBtn)
+
+        eraseCon.addEventListener("click", function () {
+            const taskName = eraseCon.parentNode.firstChild.textContent.slice(7)
+            myTasks = myTasks.filter(function (elem) {
+                return elem.title != taskName
+            })
+            eraseCon.parentElement.remove()
+            localStorage.setItem("task", JSON.stringify(myTasks))
+            pullData()
+        })
+
+        taskElem.appendChild(eraseCon)
 
         container.appendChild(taskElem)
     })
