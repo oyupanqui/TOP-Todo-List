@@ -95,8 +95,13 @@ export function addProjects (projectList, container) {
             myProjects = myProjects.filter(function (elem) {
                 return elem.title != projName
             })
+            let myOtherTasks = myTasks.filter(function (elem) {
+                return elem.project != projName
+            })
             eraseCon.parentElement.remove()
             localStorage.setItem("project", JSON.stringify(myProjects))
+            localStorage.setItem("task", JSON.stringify(myOtherTasks))
+            addProjectsNav()
         })
         
         projElem.appendChild(eraseCon)
