@@ -45,10 +45,6 @@ export function addProjectsNav () {
             const taskDiv = document.createElement("div")
             taskDiv.classList.add("task-list")
 
-            function filterProject (task) {
-                return task.title === p.title
-            }
-
             addTasks(myTasks.filter(function filterProject (task) {
                 return task.project === p.title
             }), taskDiv)
@@ -91,8 +87,17 @@ export function addProjects (projectList, container) {
         const eraseCon = document.createElement("div")
         const deleteBtn = document.createElement("i")
         deleteBtn.setAttribute("class", "fa-solid fa-eraser")
-        deleteBtn.setAttribute("style", "color: #000000")
+        deleteBtn.setAttribute("style", "color: #000000; cursor: pointer")
         eraseCon.appendChild(deleteBtn)
+        
+        eraseCon.addEventListener("click", function () {
+            const projName = eraseCon.parentNode.firstChild.textContent.slice(7)
+            myProjects = myProjects.filter(function (elem) {
+                return elem.title != projName
+            })
+            eraseCon.parentElement.remove()
+            localStorage.setItem("project", JSON.stringify(myProjects))
+        })
         
         projElem.appendChild(eraseCon)
         container.appendChild(projElem)
