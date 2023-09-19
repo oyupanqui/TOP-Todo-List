@@ -88,6 +88,13 @@ export function addProjects (projectList, container) {
         projColor.textContent = "Color: " + d.color
         projElem.appendChild(projColor)
 
+        const eraseCon = document.createElement("div")
+        const deleteBtn = document.createElement("i")
+        deleteBtn.setAttribute("class", "fa-solid fa-eraser")
+        deleteBtn.setAttribute("style", "color: #000000")
+        eraseCon.appendChild(deleteBtn)
+        
+        projElem.appendChild(eraseCon)
         container.appendChild(projElem)
     })
 }
