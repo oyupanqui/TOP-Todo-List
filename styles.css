@@ -157,6 +157,16 @@ content {
     border-radius: 5px;
 }
 
+.task-div > div {
+    width: 20%;
+    text-align: center;
+}
+
+.proj-div > div {
+    width: 33%;
+    text-align: center;
+}
+
 /* Footer */
 
 footer {
