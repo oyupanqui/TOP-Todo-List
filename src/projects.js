@@ -102,6 +102,7 @@ export function addProjects (projectList, container) {
             localStorage.setItem("project", JSON.stringify(myProjects))
             localStorage.setItem("task", JSON.stringify(myOtherTasks))
             addProjectsNav()
+            pullData()
         })
         
         projElem.appendChild(eraseCon)
