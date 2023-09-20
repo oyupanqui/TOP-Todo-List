@@ -8,6 +8,9 @@ import { addTodayTasks } from './today'
 import { addTomorrowTasks } from './tomorrow'
 import { addWeekTasks } from './week'
 import { addPriorityTasks } from './priority'
+import { brands } from './brands'
+import { fontawesome } from './fontawesome'
+import { solid } from './solid'
 
 function initialize() {
     pullData()
